@@ -1299,7 +1299,12 @@ footer .right-content {
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
 }
+
+.footer-content .right-content h2:hover {
+  color: var(--quaternary-color);
+}	
 
 .footer-content .right-content h2 em {
   font-style: normal;
