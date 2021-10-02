@@ -175,6 +175,9 @@ body {
     padding-bottom: 20px;
     padding-top: 10px;
   }
+  #testimonials .item .testimonial-content {
+    margin: auto !important;
+  }
 }
 
 @media (max-width: 425px) {
