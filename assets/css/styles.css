@@ -1581,3 +1581,75 @@ width: 100%;
     transform: translateY(-15px);
   }
 }
+
+/* Back to top button */
+#back-to-top-btn {
+z-index: 1000;
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+font-size: 26px;
+width: 50px;
+height: 50px;
+background-color: var(--primary-color);
+color: var(--tertiary-color);
+cursor: pointer;
+outline: none;
+border: 2px solid transparent;
+border-radius: 15px;
+transition-duration: 0.2s;
+transition-timing-function: ease-in-out;
+transition-property: background-color, color;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  color: var(--tertiary-color);
+  background-color: var(--quaternary-color);
+  border: 2px solid transparent;
+}
+
+/* = Animations = */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* = fadeInUp = */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* = fadeOutDown = */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+@media screen and (max-with: 768px){
+  #back-to-top-btn{
+    display:none !important;
+    visibility: hidden !important;
+  }
+}
